@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joulupuu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    #photo-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    #photo {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .button1 {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #FEAEC9;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .button2 {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #FF7F26;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .button3 {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #B5E61C;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .button4 {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ED1B24;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .button1:hover {
+      background-color: #0d5d1f;
+    }
+
+    .button2:hover {
+      background-color: #0d5d1f;
+    }
+    .button3:hover {
+      background-color: #0d5d1f;
+    }
+    .button4:hover {
+      background-color: #0d5d1f;
+    }
+    .text-container {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="photo-container">
+    <img id="photo" src="joulupuu.jpg" alt="Your Photo">
+  </div>
+
+  <button class="button1" onclick="revealText(1)">Avaa Karvapyllyjen lahja</button>
+  <button class="button2" onclick="revealText(2)">Avaa Mummin lahja</button>
+  <button class="button3" onclick="revealText(3)">Avaa Viltsun lahja</button>
+  <button class="button4" onclick="revealText(4)">Avaa Äidin lahja</button>
+
+
+
+  <div class="text-container" id="text2">
+    <p>Mummille joululahjaksi kampaamo käynti valitsemassasi kampaamossa</p>
+  </div>
+  <div class="text-container" id="text4">
+    <p>Äidille joululahjaksi 100 euron lahjakortti ravintola Farangiin</p>
+  </div>
+  <div class="text-container" id="text3">
+    <p>Viltsulle joululahjaksi risuja <br> <br> noei... <br> <br> Viltsulle joululahjaksi kaksi(2) kappaletta surffaustunteja Surf Housella Triplassa</p>
+  </div>
+  <div class="text-container" id="text1">
+    <p>Karvapyllyille joululahjaksi 50 euron lahjakortti Mustiin ja Mirriin</p>
+  </div>
+
+  <script>
+    function revealText(buttonNumber) {
+      // Hide all text containers
+      var textContainers = document.getElementsByClassName('text-container');
+      for (var i = 0; i < textContainers.length; i++) {
+        textContainers[i].style.display = 'none';
+      }
+
+      // Show the selected text container
+      document.getElementById('text' + buttonNumber).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
